@@ -7,22 +7,26 @@ import ApplyPage from "./pages/ApplyPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./styles/Pages.css";
+import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 
 const App = () => {
   return (
     <div className="main">
       <Router>
         <Header />
-
-        <Routes>
-          <Route path="/" element={<HomePages />} />
-          <Route path="/home" element={<HomePages />} />
-          <Route path="/about" element={<AboutPages />} />
-          <Route path="/courses" element={<CoursesPages />} />
-          <Route path="/contact" element={<ContactPages />} />
-          <Route path="/Apply" element={<ApplyPage/>}/>
-        </Routes>
-
+        <div className="main-container">
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<HomePages />} />
+              <Route path="/home" element={<HomePages />} />
+              <Route path="/about" element={<AboutPages />} />
+              <Route path="/courses" element={<CoursesPages />} />
+              <Route path="/contact" element={<ContactPages />} />
+              <Route path="/admissions" element={<ApplyPage />} />
+            </Routes>
+          </div>
+        </div>
+        <ChatbotComponent />
         <Footer />
       </Router>
     </div>

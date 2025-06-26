@@ -27,18 +27,35 @@
   box-shadow: 0 4px 12px #0000000d;
 }
 
-#home .banner {
+#home .hero-section {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#home .hero-section img {
   width: 100%;
-  height: 100%;
-  object-fit: fill;
+  height: 300px;
   filter: brightness(60%);
 }
 
 #home .hero-heading {
-  color: white;
-  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
   text-align: center;
-  z-index: 1;
+  width: 90%;
+}
+
+#home .hero-heading h1 {
+  font-size: 3.5em;
+  margin-bottom: 15px;
+}
+
+#home .hero-heading p {
+  font-size: 1.5em;
+  margin-bottom: 25px;
 }
 
 #home ul li {
@@ -51,13 +68,17 @@
   font-weight: 700;
 }
 
+#home .image img {
+  width: 50%;
+  object-fit: cover;
+}
+
 #home .image {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
   height: 200px;
-  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 8px #0000001a;
   transition: transform 0.3s ease;
@@ -69,7 +90,7 @@
   margin-top: 30px;
 }
 
-#home button {
+#home .button {
   display: inline-block;
   background-color: #28a745;
   color: #fff;
@@ -81,7 +102,7 @@
   border: none;
 }
 
-#home button:hover {
+#home .button:hover {
   background-color: #32bb52;
   transition: 0.3s ease;
 }
@@ -105,11 +126,29 @@
   box-shadow: 0 4px 12px #0000000d;
 }
 
-#courses video {
-  margin-top: 20px;
-  width: 100%;
+#courses .video-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: #000;
+  overflow: hidden;
 }
 
+#courses .video-container video {
+  width: 100%;
+  height: auto;
+}
+
+#courses .video-container p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 #courses ul {
   padding-left: 60px;
 }
@@ -127,22 +166,29 @@
   margin-left: 50px;
 }
 
-#courses table .table {
+#courses table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  margin-bottom: 30px;
   background-color: #f8f9fa;
-  box-shadow: 0 2px 8px #0000000d;
+  border: 1px gray;
 }
 
-#courses .table .thead {
-  display: table-row;
-  border-color: inherit;
+#courses table thead th {
+  background-color: #e9ecef;
+  font-weight: 700;
+  padding: 12px;
+  color: #343a40;
 }
 
-#courses .table .tdata {
-  vertical-align: middle;
+#courses table tbody td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+#courses table tbody tr:nth-child(2n) {
+  background-color: #f2f2f2;
 }
 
 #courses .bottom {
@@ -150,7 +196,7 @@
   margin-top: 30px;
 }
 
-#courses button {
+#courses .button {
   display: inline-block;
   background-color: #28a745;
   color: #fff;
@@ -162,7 +208,7 @@
   border: none;
 }
 
-#courses button:hover {
+#courses .button:hover {
   background-color: #32bb52;
   transition: 0.3s ease;
 }
@@ -178,4 +224,39 @@
   line-height: 1.6;
   font-size: 16px;
   color: #555;
+}
+
+#apply ol li {
+  color: #555;
+  padding-bottom: 15px;
+  margin-left: 50px;
+}
+
+#apply ol {
+  margin-bottom: 20px;
+}
+
+#apply table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8f9fa;
+  border: 1px gray;
+}
+
+#apply table thead th {
+  background-color: #e9ecef;
+  font-weight: 700;
+  padding: 12px;
+  color: #343a40;
+}
+
+#apply table tbody td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+#apply table tbody tr:nth-child(2n) {
+  background-color: #f2f2f2;
 }
