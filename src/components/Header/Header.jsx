@@ -32,27 +32,47 @@ const Header = () => {
 
               <ul>
                 <li>
-                  <Link to="/home" className="link">
+                  <Link
+                    to="/home"
+                    className="link"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="link">
+                  <Link
+                    to="/about"
+                    className="link"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/courses" className="link">
+                  <Link
+                    to="/courses"
+                    className="link"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     Courses
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="link">
+                  <Link
+                    to="/contact"
+                    className="link"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/admissions"} className="button">
+                  <Link
+                    to={"/admissions"}
+                    className="button"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     Apply Now!
                   </Link>
                 </li>
